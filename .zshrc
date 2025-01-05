@@ -94,6 +94,17 @@ alias cd="z"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 
+# Yazi Setup
+export EDITOR="nvim"
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
