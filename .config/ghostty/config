@@ -1,0 +1,13 @@
+theme = GruvboxDarkHard
+background-opacity = 0.80
+background-blur-radius = 20
+
+font-family = MesloLGS Nerd Font Mono
+
+window-padding-x = 5
+window-padding-y = 5
+window-padding-balance = true
+
+# Custom keybinds (super represents cmd key on mac)
+keybind = super+r=reload_config
+keybind = super+i=inspector:toggle
