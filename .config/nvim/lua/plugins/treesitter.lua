@@ -9,7 +9,6 @@ return {
       "rust",
       "cpp",
       "zig",
-      "odin",
     })
   end,
 }
