@@ -8,6 +8,8 @@ return {
       "typescript",
       "rust",
       "cpp",
+      "zig",
+      "odin",
     })
   end,
 }
