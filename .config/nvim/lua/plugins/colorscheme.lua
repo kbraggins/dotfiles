@@ -1,12 +1,11 @@
 return {
-
   -- add gruvbox
   {
     "ellisonleao/gruvbox.nvim",
     opts = {
       contrast = "medium",
       transparent_mode = true,
-    }
+    },
   },
 
   -- add catppuccin
@@ -16,7 +15,7 @@ return {
     name = "catppuccin",
     opts = {
       transparent_background = true,
-    }
+    },
   },
 
   -- add papercolor
@@ -30,15 +29,14 @@ return {
   {
     "navarasu/onedark.nvim",
     opts = {
-      style = "dark"
-    }
+      style = "dark",
+    },
   },
 
   -- add kanagawa
   {
     "rebelot/kanagawa.nvim",
-    opts = {
-    }
+    opts = {},
   },
 
   -- Configure LazyVim to load colorscheme
