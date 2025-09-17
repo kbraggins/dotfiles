@@ -8,7 +8,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export VULKAN_SDK=/Users/kbragg/VulkanSDK/1.4.304.0/macOS
+export VULKAN_SDK=/Users/kbragg/VulkanSDK/1.4.313.1/macOS
 export PATH=$VULKAN_SDK/bin:$PATH
 export DYLD_LIBRARY_PATH=$VULKAN_SDK/lib:$DYLD_LIBRARY_PATH
 export VK_ICD_FILENAMES=$VULKAN_SDK/share/vulkan/icd.d/MoltenVK_icd.json
