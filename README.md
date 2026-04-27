@@ -26,7 +26,7 @@ Examples:
    cd ~/.dotfiles
    ```
 
-2. Install GNU Stow (if you don’t already have it):
+2. Install GNU Stow (if you don't already have it):
 
    ```bash
    brew install stow
