@@ -1,0 +1,8 @@
+name = "New tab: kbragg"
+
+[[panes]]
+id = "main"
+type = "terminal"
+directory = "/Users/kbragg"
+
+[params]
