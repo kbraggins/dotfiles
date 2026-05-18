@@ -60,13 +60,23 @@ return {
     opts = {
       transparent_background = true,
     },
+    config = function()
+      require("monokai-pro").set_filter("classic")
+      require("monokai-pro").setup({
+        override_palette = function(filter)
+          return {
+            background = "#2d2a2e",
+          }
+        end,
+      })
+    end,
   },
 
   -- Configure LazyVim to load colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      --colorscheme = "catppuccin",
     },
   },
 }
