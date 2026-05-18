@@ -50,7 +50,9 @@ ai_font_name = "MesloLGS Nerd Font Mono"
 match_ai_font = false
 
 [appearance.themes]
-theme = { custom = { name = "Catppuccin Mocha", path = "/Users/kbragg/.warp/themes/catppuccin_mocha.yml" } }
+theme = {
+  custom = { name = "Monokai Pro Custom", path = "/Users/kbragg/.warp/themes/monokai_pro_custom.yaml" },
+}
 
 [appearance.icon]
 app_icon = "default"
