@@ -52,6 +52,16 @@ return {
     opts = {},
   },
 
+  -- add monokai pro
+  {
+    "loctvl842/monokai-pro.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent_background = true,
+    },
+  },
+
   -- Configure LazyVim to load colorscheme
   {
     "LazyVim/LazyVim",
