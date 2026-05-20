@@ -56,27 +56,28 @@ return {
   {
     "loctvl842/monokai-pro.nvim",
     lazy = false,
-    priority = 1000,
     opts = {
       transparent_background = true,
     },
-    config = function()
-      require("monokai-pro").set_filter("classic")
-      require("monokai-pro").setup({
-        override_palette = function(filter)
-          return {
-            background = "#2d2a2e",
-          }
-        end,
-      })
-    end,
+    -- Custom settings for monokai pro setup
+    -- This applies the classic filter along with changing the bg color
+    -- config = function()
+    --   require("monokai-pro").set_filter("classic")
+    --   require("monokai-pro").setup({
+    --     override_palette = function(filter)
+    --       return {
+    --         background = "#2d2a2e",
+    --       }
+    --     end,
+    --   })
+    -- end,
   },
 
   -- Configure LazyVim to load colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
-      --colorscheme = "catppuccin",
+      colorscheme = "duskfall",
     },
   },
 }
