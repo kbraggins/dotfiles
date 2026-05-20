@@ -50,9 +50,7 @@ ai_font_name = "MesloLGS Nerd Font Mono"
 match_ai_font = false
 
 [appearance.themes]
-theme = {
-  custom = { name = "Monokai Pro Custom", path = "/Users/kbragg/.warp/themes/monokai_pro_custom.yaml" },
-}
+theme = { custom = { name = "Duskfall", path = "/Users/kbragg/.warp/themes/duskfall.yaml" } }
 
 [appearance.icon]
 app_icon = "default"

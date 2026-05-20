@@ -8,18 +8,20 @@ end
 
 local colors = {
   bg = "#0c1021",
-  fg = "#ffffff",
+  fg = "#fdfff1",
   orange = "#f25e01",
   yellow = "#b3f63a",
   green = "#55ba30",
   blue = "#7c9ec8",
   blue_light = "#97c7e9",
   blue_dark = "#000098",
+  red = "#f2011c",
   gray = "#a4a7a7",
   gray_dark = "#505257",
   magenta = "#ff0cff",
-  white = "#ffffff",
+  white = "#fdfff1",
   cream = "#ffbfb9",
+  black = "#272822",
 }
 
 -- Highlight groups
