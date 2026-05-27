@@ -47,9 +47,11 @@ local highlights = {
   NeoTreeFileName = { fg = colors.orange },
   NeoTreeFileNameOpened = { fg = colors.white },
   NeoTreeDotfile = { fg = colors.gray },
-  NeoTreeRootName = { fg = colors.yellow },
+  NeoTreeRootName = { fg = colors.magenta },
   NeoTreeFloatBorder = { fg = colors.orange },
   NeoTreeWinSeparator = { fg = colors.orange },
+  NeoTreeIndentMarker = { fg = colors.magenta },
+  NeoTreeExpander = { fg = colors.magenta },
 
   -- Snacks.nvim
   SnacksDashboardHeader = { fg = colors.orange },
