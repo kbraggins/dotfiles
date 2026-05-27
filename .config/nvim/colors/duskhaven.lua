@@ -41,6 +41,15 @@ local highlights = {
   ["@function"] = { fg = colors.blue },
   ["@string"] = { fg = colors.yellow },
   ["@punctuation"] = { fg = colors.magenta },
+
+  -- NeoTree
+  NeoTreeDirectoryName = { fg = colors.yellow },
+  NeoTreeFileName = { fg = colors.orange },
+  NeoTreeFileNameOpened = { fg = colors.white },
+  NeoTreeDotfile = { fg = colors.gray },
+  NeoTreeRootName = { fg = colors.yellow },
+  NeoTreeFloatBorder = { fg = colors.orange },
+  NeoTreeWinSeparator = { fg = colors.orange },
 }
 
 -- Apply highlights
