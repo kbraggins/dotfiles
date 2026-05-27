@@ -14,7 +14,7 @@ terminal_colors:
     green:   '#55ba30'
     yellow:  '#b3f63a'
     blue:    '#7c9ec8'
-    magenta: '#ff0cff'
+    magenta: '#ff0cac'
     cyan:    '#97c7e9'
     white:   '#fdfff1'
   normal:
@@ -23,6 +23,6 @@ terminal_colors:
     green:   '#55ba30'
     yellow:  '#b3f63a'
     blue:    '#7c9ec8'
-    magenta: '#ff0cff'
+    magenta: '#ff0cac'
     cyan:    '#97c7e9'
     white:   '#fdfff1'
