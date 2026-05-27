@@ -50,6 +50,14 @@ local highlights = {
   NeoTreeRootName = { fg = colors.yellow },
   NeoTreeFloatBorder = { fg = colors.orange },
   NeoTreeWinSeparator = { fg = colors.orange },
+
+  -- Snacks.nvim
+  SnacksDashboardHeader = { fg = colors.orange },
+  SnacksDashboardIcon = { fg = colors.yellow },
+  SnacksDashboardDesc = { fg = colors.orange },
+  SnacksDashboardKey = { fg = colors.yellow },
+  SnacksDashboardFooter = { fg = colors.yellow },
+  SnacksDashboardSpecial = { fg = colors.magenta },
 }
 
 -- Apply highlights
