@@ -77,7 +77,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "duskfall",
+      colorscheme = "duskhaven",
     },
   },
 }

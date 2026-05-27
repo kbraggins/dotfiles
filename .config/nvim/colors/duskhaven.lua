@@ -1,4 +1,4 @@
-vim.g.colors_name = "duskfall"
+vim.g.colors_name = "duskhaven"
 
 -- Clear previous highlights first
 vim.cmd([[hi clear]])
