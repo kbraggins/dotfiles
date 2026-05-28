@@ -29,7 +29,7 @@ local highlights = {
   Normal = { fg = colors.fg, bg = colors.bg },
   Comment = { fg = colors.gray },
   LineNr = { fg = colors.yellow },
-  Keyword = { fg = colors.orange },
+  Keyword = { fg = colors.yellow },
   String = { fg = colors.yellow },
   EndOfBuffer = { fg = colors.fg, bg = colors.bg },
   Function = { fg = colors.blue },
