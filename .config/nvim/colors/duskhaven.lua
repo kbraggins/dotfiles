@@ -14,8 +14,8 @@ local colors = {
   green = "#55ba30",
   blue = "#7c9ec8",
   blue_light = "#97c7e9",
-  blue_dark = "#000098",
-  red = "#f2011c",
+  blue_dark = "#314d8a",
+  red = "#ba0f35",
   gray = "#a4a7a7",
   gray_dark = "#505257",
   magenta = "#ff0cac",
@@ -35,9 +35,9 @@ local highlights = {
   Function = { fg = colors.blue },
 
   -- Treesitter
-  ["@variable"] = { fg = colors.blue_light },
+  ["@variable"] = { fg = colors.orange },
   ["@keyword"] = { fg = colors.yellow },
-  ["@type"] = { fg = colors.orange },
+  ["@type"] = { fg = colors.blue_light },
   ["@function"] = { fg = colors.blue },
   ["@string"] = { fg = colors.yellow },
   ["@punctuation"] = { fg = colors.magenta },
