@@ -50,7 +50,7 @@ ai_font_name = "MesloLGS Nerd Font Mono"
 match_ai_font = false
 
 [appearance.themes]
-theme = { custom = { name = "Duskhaven", path = "/Users/kbragg/.warp/themes/duskhaven.yaml" } }
+theme = { custom = { name = "Duskhaven", path = "duskhaven.yaml" } }
 
 [appearance.icon]
 app_icon = "default"
