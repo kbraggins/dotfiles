@@ -41,6 +41,7 @@ enabled = false
 
 [appearance.window]
 override_opacity = 75
+override_blur = 20
 
 [appearance.text]
 notebook_font_size = 14.0
