@@ -23,6 +23,7 @@ local colors = {
   green = "#55ba30",
   gray = "#a4a7a7",
   gray_dark = "#505257",
+  gray_darker = "#35384a",
   peach = "#f5c6b0",
   black = "#272822",
 }
@@ -30,12 +31,26 @@ local colors = {
 -- Highlight groups
 local highlights = {
   Normal = { fg = colors.fg, bg = colors.bg },
+  NormalFloat = { fg = colors.fg, bg = colors.bg_dark },
   Comment = { fg = colors.gray },
   LineNr = { fg = colors.yellow },
+  CursorLineNr = { fg = colors.yellow, bold = true },
   Keyword = { fg = colors.yellow },
   String = { fg = colors.yellow },
   EndOfBuffer = { fg = colors.fg, bg = colors.bg },
   Function = { fg = colors.blue },
+
+  -- UI Elements
+  Visual = { bg = colors.gray_darker },
+  CursorLine = { bg = colors.bg_light },
+  Search = { fg = colors.bg, bg = colors.yellow },
+  IncSearch = { fg = colors.bg, bg = colors.orange },
+
+  -- Diagnostics
+  DiagnosticError = { fg = colors.red },
+  DiagnosticWarn = { fg = colors.yellow },
+  DiagnosticInfo = { fg = colors.blue_light },
+  DiagnosticHint = { fg = colors.peach },
 
   -- Treesitter
   ["@variable"] = { fg = colors.orange },
