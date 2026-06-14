@@ -21,10 +21,11 @@ local colors = {
   blue_dark = "#314d8a",
   red = "#e04a5f",
   green = "#55ba30",
+  peach = "#f5c6b0",
+  cream = "#f8e9c7",
   gray = "#a4a7a7",
   gray_dark = "#505257",
   gray_darker = "#35384a",
-  peach = "#f5c6b0",
   black = "#272822",
 }
 
@@ -49,7 +50,7 @@ local highlights = {
   -- Diagnostics
   DiagnosticError = { fg = colors.red },
   DiagnosticWarn = { fg = colors.yellow },
-  DiagnosticInfo = { fg = colors.blue_light },
+  DiagnosticInfo = { fg = colors.cream },
   DiagnosticHint = { fg = colors.peach },
 
   -- Treesitter
@@ -70,6 +71,10 @@ local highlights = {
   NeoTreeWinSeparator = { fg = colors.orange },
   NeoTreeIndentMarker = { fg = colors.magenta },
   NeoTreeExpander = { fg = colors.magenta },
+  NeoTreeGitAdded = { fg = colors.green },
+  NeoTreeGitModified = { fg = colors.cream },
+  NeoTreeGitDeleted = { fg = colors.red },
+  NeoTreeGitIgnored = { fg = colors.gray_dark },
 
   -- Snacks.nvim
   SnacksDashboardHeader = { fg = colors.orange },
