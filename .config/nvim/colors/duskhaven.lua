@@ -40,6 +40,9 @@ local highlights = {
   String = { fg = colors.yellow },
   EndOfBuffer = { fg = colors.fg, bg = colors.bg },
   Function = { fg = colors.blue },
+  Macro = { fg = colors.magenta },
+  Type = { fg = colors.blue_light },
+  Constant = { fg = colors.peach },
 
   -- UI Elements
   Visual = { bg = colors.gray_darker },
@@ -57,9 +60,12 @@ local highlights = {
   ["@variable"] = { fg = colors.orange },
   ["@keyword"] = { fg = colors.yellow },
   ["@type"] = { fg = colors.blue_light },
+  ["@type.builtin"] = { fg = colors.yellow },
   ["@function"] = { fg = colors.blue },
   ["@string"] = { fg = colors.yellow },
   ["@punctuation"] = { fg = colors.magenta },
+  ["@constant"] = { fg = colors.peach },
+  ["@constant.macro"] = { fg = colors.magenta },
 
   -- NeoTree
   NeoTreeDirectoryName = { fg = colors.yellow },
