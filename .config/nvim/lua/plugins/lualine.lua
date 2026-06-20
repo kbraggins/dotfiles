@@ -1,6 +1,9 @@
 return {
   "nvim-lualine/lualine.nvim",
   opts = {
+    options = {
+      theme = require("lualine.themes.duskhaven"),
+    },
     sections = {
       lualine_z = {
         { "datetime", style = "%I:%M %p" }, -- ← 12-hour + AM/PM
