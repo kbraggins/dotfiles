@@ -35,6 +35,51 @@ local highlights = {
   DiagnosticInfo = { fg = colors.cream },
   DiagnosticHint = { fg = colors.peach },
 
+  -- Completion Menu (Pmenu + Cmp + Blink)
+  Pmenu = { fg = colors.fg, bg = colors.bg_dark },
+  PmenuSel = { fg = colors.fg, bg = colors.bg_light, bold = true },
+  PmenuBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+  PmenuThumb = { bg = colors.gray_dark },
+  FloatBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+
+  CmpItemAbbr = { fg = colors.fg },
+  CmpItemAbbrDeprecated = { fg = colors.gray, strikethrough = true },
+  CmpItemAbbrMatch = { fg = colors.blue_light, bold = true },
+  CmpItemAbbrMatchFuzzy = { fg = colors.blue_light, bold = true },
+
+  CmpItemKind = { fg = colors.blue },
+  CmpItemMenu = { fg = colors.fg_dim },
+
+  CmpItemKindMethod = { fg = colors.blue },
+  CmpItemKindFunction = { fg = colors.blue },
+  CmpItemKindConstructor = { fg = colors.blue },
+  CmpItemKindClass = { fg = colors.blue_light },
+  CmpItemKindInterface = { fg = colors.blue_light },
+  CmpItemKindStruct = { fg = colors.blue_light },
+  CmpItemKindModule = { fg = colors.blue_dark },
+  CmpItemKindVariable = { fg = colors.orange },
+  CmpItemKindProperty = { fg = colors.orange },
+  CmpItemKindField = { fg = colors.orange },
+  CmpItemKindConstant = { fg = colors.peach },
+  CmpItemKindEnum = { fg = colors.yellow },
+  CmpItemKindEnumMember = { fg = colors.yellow },
+  CmpItemKindSnippet = { fg = colors.magenta },
+  CmpItemKindKeyword = { fg = colors.yellow },
+  CmpItemKindText = { fg = colors.fg_dim },
+  CmpGhostText = { fg = colors.gray, italic = true },
+
+  -- Blink.cmp
+  BlinkCmpLabel = { fg = colors.fg },
+  BlinkCmpLabelMatch = { fg = colors.blue_light, bold = true },
+  BlinkCmpLabelDetail = { fg = colors.fg_dim },
+  BlinkCmpKind = { fg = colors.blue },
+  BlinkCmpMenu = { fg = colors.fg_dim },
+  BlinkCmpKindFunction = { fg = colors.blue },
+  BlinkCmpKindMethod = { fg = colors.blue },
+  BlinkCmpKindClass = { fg = colors.blue_light },
+  BlinkCmpKindModule = { fg = colors.blue_dark },
+  BlinkCmpKindVariable = { fg = colors.orange },
+
   -- Treesitter
   ["@variable"] = { fg = colors.orange },
   ["@keyword"] = { fg = colors.yellow },
