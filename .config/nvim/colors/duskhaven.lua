@@ -14,6 +14,7 @@ local highlights = {
   NormalFloat = { fg = colors.fg, bg = colors.bg_dark },
   Comment = { fg = colors.gray },
   LineNr = { fg = colors.yellow },
+  Cursor = { fg = colors.bg, bg = colors.orange },
   CursorLineNr = { fg = colors.yellow, bold = true },
   Keyword = { fg = colors.yellow },
   String = { fg = colors.yellow },
@@ -22,6 +23,8 @@ local highlights = {
   Macro = { fg = colors.magenta },
   Type = { fg = colors.blue_light },
   Constant = { fg = colors.peach },
+  Title = { fg = colors.orange, bold = true },
+  NonText = { fg = colors.gray_dark },
 
   -- UI Elements
   Visual = { bg = colors.gray_darker },
@@ -29,11 +32,23 @@ local highlights = {
   Search = { fg = colors.bg, bg = colors.yellow },
   IncSearch = { fg = colors.bg, bg = colors.orange },
 
+  -- Statusline / Tabline
+  StatusLine = { fg = colors.fg_dim, bg = colors.bg_dark },
+  StatusLineNC = { fg = colors.gray, bg = colors.bg_dark },
+  TabLine = { fg = colors.gray, bg = colors.bg_dark },
+  TabLineSel = { fg = colors.fg, bg = colors.bg_light, bold = true },
+  TabLineFill = { bg = colors.bg_dark },
+
   -- Diagnostics
   DiagnosticError = { fg = colors.red },
   DiagnosticWarn = { fg = colors.yellow },
   DiagnosticInfo = { fg = colors.cream },
   DiagnosticHint = { fg = colors.peach },
+
+  -- Spelling
+  SpellBad = { undercurl = true, sp = colors.red },
+  SpellRare = { undercurl = true, sp = colors.magenta },
+  SpellCap = { undercurl = true, sp = colors.blue_light },
 
   -- Completion Menu (Pmenu + Cmp + Blink)
   Pmenu = { fg = colors.fg, bg = colors.bg_dark },
@@ -90,11 +105,15 @@ local highlights = {
   ["@punctuation"] = { fg = colors.magenta },
   ["@constant"] = { fg = colors.peach },
   ["@constant.macro"] = { fg = colors.magenta },
+  ["@operator"] = { fg = colors.magenta },
+  ["@tag"] = { fg = colors.blue_light },
+  ["@tag.attribute"] = { fg = colors.peach },
+  ["@tag.delimiter"] = { fg = colors.magenta },
 
   -- NeoTree
   NeoTreeDirectoryName = { fg = colors.yellow },
   NeoTreeFileName = { fg = colors.orange },
-  NeoTreeFileNameOpened = { fg = colors.white },
+  NeoTreeFileNameOpened = { fg = colors.fg },
   NeoTreeDotfile = { fg = colors.gray },
   NeoTreeRootName = { fg = colors.magenta },
   NeoTreeFloatBorder = { fg = colors.orange },
@@ -113,6 +132,26 @@ local highlights = {
   SnacksDashboardKey = { fg = colors.yellow },
   SnacksDashboardFooter = { fg = colors.yellow },
   SnacksDashboardSpecial = { fg = colors.magenta },
+
+  -- WhichKey
+  WhichKey = { fg = colors.yellow },
+  WhichKeyGroup = { fg = colors.blue_light },
+  WhichKeyDesc = { fg = colors.fg_dim },
+  WhichKeySeparator = { fg = colors.gray },
+
+  -- Git signs
+  GitSignsAdd = { fg = colors.green },
+  GitSignsChange = { fg = colors.cream },
+  GitSignsDelete = { fg = colors.red },
+  GitSignsUntracked = { fg = colors.gray },
+
+  -- Telescope
+  TelescopeNormal = { fg = colors.fg, bg = colors.bg_dark },
+  TelescopeBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+  TelescopePromptNormal = { fg = colors.fg, bg = colors.bg_light },
+  TelescopePromptBorder = { fg = colors.orange, bg = colors.bg_light },
+  TelescopeSelection = { fg = colors.fg, bg = colors.bg_light, bold = true },
+  TelescopeMatching = { fg = colors.blue_light, bold = true },
 }
 
 -- Apply highlights
