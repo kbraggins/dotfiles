@@ -1,14 +1,17 @@
 return {
-
   "nvim-treesitter/nvim-treesitter",
   opts = function(_, opts)
-    -- add tsx and treesitter
-    vim.list_extend(opts.ensure_installed, {
+    opts.ensure_installed = vim.tbl_extend("force", opts.ensure_installed or {}, {
+      "lua",
       "tsx",
       "typescript",
       "rust",
       "cpp",
       "zig",
+      "json",
+      "markdown",
+      "markdown_inline",
+      "bash",
     })
   end,
 }
