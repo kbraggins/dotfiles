@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>Duskhaven</string>
+    <key>settings</key>
+    <array>
+        <!-- Global Settings -->
+        <dict>
+            <key>settings</key>
+            <dict>
+                <key>background</key>
+                <string>#0c1021</string>
+                <key>foreground</key>
+                <string>#fdfff1</string>
+                <key>caret</key>
+                <string>#f25e01</string>
+                <key>selection</key>
+                <string>#35384a</string>
+            </dict>
+        </dict>
+        <!-- Comments -->
+        <dict>
+            <key>name</key>
+            <string>Comments</string>
+            <key>scope</key>
+            <string>comment, punctuation.definition.comment</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#a4a7a7</string>
+            </dict>
+        </dict>
+        <!-- Keywords (Your Neovim theme uses yellow for keywords) -->
+        <dict>
+            <key>name</key>
+            <string>Keywords</string>
+            <key>scope</key>
+            <string>keyword, storage</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#b3f63a</string>
+            </dict>
+        </dict>
+        <!-- Strings (Also yellow in your Neovim theme) -->
+        <dict>
+            <key>name</key>
+            <string>Strings</string>
+            <key>scope</key>
+            <string>string</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#b3f63a</string>
+            </dict>
+        </dict>
+        <!-- Functions (Blue) -->
+        <dict>
+            <key>name</key>
+            <string>Functions</string>
+            <key>scope</key>
+            <string>entity.name.function, support.function</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#6b8ab8</string>
+            </dict>
+        </dict>
+        <!-- Variables (Orange) -->
+        <dict>
+            <key>name</key>
+            <string>Variables</string>
+            <key>scope</key>
+            <string>variable, variable.parameter</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#f25e01</string>
+            </dict>
+        </dict>
+        <!-- Types and Classes (Light Blue) -->
+        <dict>
+            <key>name</key>
+            <string>Types and Classes</string>
+            <key>scope</key>
+            <string>entity.name.type, entity.name.class, support.type, support.class</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#97c7e9</string>
+            </dict>
+        </dict>
+        <!-- Constants (Peach) -->
+        <dict>
+            <key>name</key>
+            <string>Constants</string>
+            <key>scope</key>
+            <string>constant.numeric, constant.language, constant.character, constant.other</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#f5c6b0</string>
+            </dict>
+        </dict>
+        <!-- Operators and Punctuation (Magenta) -->
+        <dict>
+            <key>name</key>
+            <string>Punctuation / Operators</string>
+            <key>scope</key>
+            <string>keyword.operator, punctuation</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ff0cac</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
