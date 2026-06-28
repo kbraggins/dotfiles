@@ -25,12 +25,14 @@ local highlights = {
   Constant = { fg = colors.peach },
   Title = { fg = colors.orange, bold = true },
   NonText = { fg = colors.gray_dark },
+  Special = { fg = colors.magenta },
 
   -- UI Elements
   Visual = { bg = colors.gray_darker },
   CursorLine = { bg = colors.bg_light },
   Search = { fg = colors.bg, bg = colors.yellow },
   IncSearch = { fg = colors.bg, bg = colors.orange },
+  CmdlineBorder = { fg = colors.blue_light, bg = colors.bg_dark },
 
   -- Statusline / Tabline
   StatusLine = { fg = colors.fg_dim, bg = colors.bg_dark },
@@ -83,7 +85,6 @@ local highlights = {
   CmpItemKindText = { fg = colors.fg_dim },
   CmpGhostText = { fg = colors.gray, italic = true },
 
-  -- Blink.cmp
   BlinkCmpLabel = { fg = colors.fg },
   BlinkCmpLabelMatch = { fg = colors.blue_light, bold = true },
   BlinkCmpLabelDetail = { fg = colors.fg_dim },
@@ -130,8 +131,8 @@ local highlights = {
   NeoTreeFileNameOpened = { fg = colors.fg },
   NeoTreeDotfile = { fg = colors.gray },
   NeoTreeRootName = { fg = colors.magenta },
-  NeoTreeFloatBorder = { fg = colors.orange },
-  NeoTreeWinSeparator = { fg = colors.orange },
+  NeoTreeFloatBorder = { fg = colors.blue_light },
+  NeoTreeWinSeparator = { fg = colors.blue_light },
   NeoTreeIndentMarker = { fg = colors.magenta },
   NeoTreeExpander = { fg = colors.magenta },
 
@@ -161,13 +162,50 @@ local highlights = {
   GitSignsDelete = { fg = colors.red },
   GitSignsUntracked = { fg = colors.gray },
 
+  -- fzf-lua
+  FzfLuaNormal = { fg = colors.fg, bg = colors.bg_dark },
+  FzfLuaBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+  FzfLuaTitle = { fg = colors.orange, bold = true },
+  FzfLuaTitleFlag = { fg = colors.magenta },
+
+  FzfLuaCursor = { fg = colors.bg, bg = colors.orange },
+  FzfLuaCursorLine = { bg = colors.bg_light },
+  FzfLuaCursorLineNr = { fg = colors.yellow, bold = true },
+
+  FzfLuaSearch = { fg = colors.bg, bg = colors.yellow },
+  FzfLuaMatch = { fg = colors.blue_light, bold = true },
+
+  FzfLuaPreviewTitle = { fg = colors.orange, bold = true },
+  FzfLuaPreviewBorder = { fg = colors.blue_light },
+
+  -- Help / Header
+  FzfLuaHelpNormal = { fg = colors.fg_dim },
+  FzfLuaHelpBorder = { fg = colors.gray },
+
+  -- Selection
+  FzfLuaSel = { fg = colors.fg, bg = colors.bg_light, bold = true },
+
+  -- Git / Status
+  FzfLuaGitAdd = { fg = colors.green },
+  FzfLuaGitDelete = { fg = colors.red },
+  FzfLuaGitChange = { fg = colors.cream },
+
+  -- Icons / Kinds
+  FzfLuaDir = { fg = colors.blue_light, bold = true },
+  FzfLuaFile = { fg = colors.fg },
+  FzfLuaSymlink = { fg = colors.peach },
+
   -- Telescope
   TelescopeNormal = { fg = colors.fg, bg = colors.bg_dark },
   TelescopeBorder = { fg = colors.blue_light, bg = colors.bg_dark },
   TelescopePromptNormal = { fg = colors.fg, bg = colors.bg_light },
-  TelescopePromptBorder = { fg = colors.orange, bg = colors.bg_light },
+  TelescopePromptBorder = { fg = colors.bg_light, bg = colors.bg_light },
   TelescopeSelection = { fg = colors.fg, bg = colors.bg_light, bold = true },
   TelescopeMatching = { fg = colors.blue_light, bold = true },
+
+  -- noice.nvim
+  NoiceCmdlinePopupBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+  NoiceCmdlinePopupBorderSearch = { fg = colors.orange, bg = colors.bg_dark },
 }
 
 -- Apply highlights
