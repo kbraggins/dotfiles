@@ -1,0 +1,128 @@
+2026-06-26T01:09:59.234834Z  INFO herdr::platform::macos: raised server file descriptor soft limit previous=256 target=8192
+2026-06-26T01:09:59.235252Z  INFO herdr::api::server: api server listening path=/Users/kbragg/.config/herdr/herdr.sock
+2026-06-26T01:09:59.236055Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-06-26T01:09:59.248323Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-26T01:09:59.249030Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-06-26T01:09:59.251753Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=3963
+2026-06-26T01:09:59.251999Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w1" pane_id=1
+2026-06-26T01:09:59.252024Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-06-26T01:09:59.252125Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-06-26T01:09:59.252152Z  INFO herdr::server::headless: created startup workspace cwd=/Users/kbragg
+2026-06-26T01:09:59.252294Z  INFO herdr::server::headless: client protocol socket listening path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:09:59.252329Z  INFO herdr::server::headless: herdr server started api_socket=/Users/kbragg/.config/herdr/herdr.sock client_socket=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:09:59.252624Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=3943
+2026-06-26T01:09:59.309760Z  INFO herdr::server::headless: client connected client_id=2 cols=122 rows=41 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-06-26T01:10:04.255002Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/kbragg/.config/herdr/session.json workspaces=1
+2026-06-26T01:10:04.881736Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 0, signal: None }"
+2026-06-26T01:10:04.881829Z  INFO herdr::pane: pane session terminated pane=1 pid=3963 signal=Hangup
+2026-06-26T01:10:04.881968Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=40 cols=96 scrollback_limit_bytes=10000000
+2026-06-26T01:10:04.884623Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=4934
+2026-06-26T01:10:04.884792Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w2" pane_id=2
+2026-06-26T01:10:04.884807Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w2"
+2026-06-26T01:10:04.884816Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-06-26T01:10:09.908061Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/kbragg/.config/herdr/session.json workspaces=1
+2026-06-26T01:10:27.970757Z  INFO herdr::server::headless: client detach requested via keybind client_id=2
+2026-06-26T01:10:27.976948Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-06-26T01:10:34.607153Z  INFO herdr::server::headless: client connected client_id=4 cols=122 rows=41 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-06-26T01:10:45.074753Z  INFO herdr::server::headless: server shutdown initiated
+2026-06-26T01:10:45.129641Z  INFO herdr::server::headless: completing server shutdown
+2026-06-26T01:10:45.185079Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/kbragg/.config/herdr/session.json workspaces=1
+2026-06-26T01:10:45.185101Z  INFO herdr::server::headless: headless server exiting
+2026-06-26T01:10:45.188153Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 1, signal: None }"
+2026-06-26T01:10:45.209725Z  INFO herdr::pane: pane session terminated pane=2 pid=4934 signal=Hangup
+2026-06-26T01:10:45.210379Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=3943
+2026-06-26T01:11:25.083190Z  INFO herdr::platform::macos: raised server file descriptor soft limit previous=256 target=8192
+2026-06-26T01:11:25.085026Z  INFO herdr::api::server: api server listening path=/Users/kbragg/.config/herdr/herdr.sock
+2026-06-26T01:11:25.090911Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-06-26T01:11:25.095207Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=7439
+2026-06-26T01:11:25.096436Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-06-26T01:11:25.096740Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-06-26T01:11:25.124683Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-26T01:11:25.125472Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/Users/kbragg/.config
+2026-06-26T01:11:25.125744Z  INFO herdr::server::headless: client protocol socket listening path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:11:25.125780Z  INFO herdr::server::headless: herdr server started api_socket=/Users/kbragg/.config/herdr/herdr.sock client_socket=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:11:25.125821Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=7438
+2026-06-26T01:11:25.128608Z  INFO herdr::server::headless: client connected client_id=2 cols=122 rows=41 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-06-26T01:17:22.594498Z  INFO herdr::server::headless: client detach requested via keybind client_id=2
+2026-06-26T01:17:22.599701Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-06-26T01:17:24.377970Z  INFO herdr::server::headless: client connected client_id=4 cols=122 rows=41 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-06-26T01:18:25.847598Z  INFO herdr::server::headless: server shutdown initiated
+2026-06-26T01:18:25.902826Z  INFO herdr::server::headless: completing server shutdown
+2026-06-26T01:18:25.959259Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/kbragg/.config/herdr/session.json workspaces=1
+2026-06-26T01:18:25.959486Z  INFO herdr::server::headless: headless server exiting
+2026-06-26T01:18:25.962347Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: None }"
+2026-06-26T01:18:25.985124Z  INFO herdr::pane: pane session terminated pane=1 pid=7439 signal=Hangup
+2026-06-26T01:18:25.985805Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=7438
+2026-06-26T01:18:27.691058Z  INFO herdr::platform::macos: raised server file descriptor soft limit previous=256 target=8192
+2026-06-26T01:18:27.691371Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[0].command; disabling custom command
+2026-06-26T01:18:27.691390Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[1].command; disabling custom command
+2026-06-26T01:18:27.691588Z  INFO herdr::api::server: api server listening path=/Users/kbragg/.config/herdr/herdr.sock
+2026-06-26T01:18:27.691815Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[0].command; disabling custom command
+2026-06-26T01:18:27.691836Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[1].command; disabling custom command
+2026-06-26T01:18:27.692836Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-06-26T01:18:27.695243Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=10730
+2026-06-26T01:18:27.695444Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-06-26T01:18:27.695463Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-06-26T01:18:27.718930Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[0].command; disabling custom command
+2026-06-26T01:18:27.718943Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[1].command; disabling custom command
+2026-06-26T01:18:27.721031Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-26T01:18:27.721167Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[0].command; disabling custom command
+2026-06-26T01:18:27.721174Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[1].command; disabling custom command
+2026-06-26T01:18:27.721451Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/Users/kbragg/.config
+2026-06-26T01:18:27.721567Z  INFO herdr::server::headless: client protocol socket listening path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:18:27.721583Z  INFO herdr::server::headless: herdr server started api_socket=/Users/kbragg/.config/herdr/herdr.sock client_socket=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:18:27.721601Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=10729
+2026-06-26T01:18:27.765525Z  INFO herdr::server::headless: client connected client_id=2 cols=122 rows=41 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-06-26T01:19:30.507655Z  INFO herdr::server::headless: server shutdown initiated
+2026-06-26T01:19:30.559487Z  INFO herdr::server::headless: completing server shutdown
+2026-06-26T01:19:30.615358Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/kbragg/.config/herdr/session.json workspaces=1
+2026-06-26T01:19:30.615388Z  INFO herdr::server::headless: headless server exiting
+2026-06-26T01:19:30.617854Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: None }"
+2026-06-26T01:19:30.640784Z  INFO herdr::pane: pane session terminated pane=1 pid=10730 signal=Hangup
+2026-06-26T01:19:30.641590Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=10729
+2026-06-26T01:19:31.556714Z  INFO herdr::platform::macos: raised server file descriptor soft limit previous=256 target=8192
+2026-06-26T01:19:31.557329Z  INFO herdr::api::server: api server listening path=/Users/kbragg/.config/herdr/herdr.sock
+2026-06-26T01:19:31.557888Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-06-26T01:19:31.561174Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=11412
+2026-06-26T01:19:31.561407Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-06-26T01:19:31.561427Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-06-26T01:19:31.580909Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-26T01:19:31.581280Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/Users/kbragg/.config
+2026-06-26T01:19:31.581384Z  INFO herdr::server::headless: client protocol socket listening path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:19:31.581401Z  INFO herdr::server::headless: herdr server started api_socket=/Users/kbragg/.config/herdr/herdr.sock client_socket=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:19:31.581418Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=11411
+2026-06-26T01:19:31.617369Z  INFO herdr::server::headless: client connected client_id=2 cols=122 rows=41 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-06-26T01:49:31.537769Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-26T02:14:27.529070Z  INFO herdr::server::headless: client resize client_id=2 cols=187 rows=54 cell_width_px=0 cell_height_px=0
+2026-06-26T02:19:31.681020Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-26T02:19:36.133434Z  INFO herdr::server::headless: server shutdown initiated
+2026-06-26T02:19:36.188507Z  INFO herdr::server::headless: completing server shutdown
+2026-06-26T02:19:36.244473Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/kbragg/.config/herdr/session.json workspaces=1
+2026-06-26T02:19:36.244504Z  INFO herdr::server::headless: headless server exiting
+2026-06-26T02:19:36.246901Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: None }"
+2026-06-26T02:19:36.269928Z  INFO herdr::pane: pane session terminated pane=1 pid=11412 signal=Hangup
+2026-06-26T02:19:36.270516Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=11411
+2026-06-28T01:01:38.238813Z  INFO herdr::platform::macos: raised server file descriptor soft limit previous=256 target=8192
+2026-06-28T01:01:38.240116Z  INFO herdr::api::server: api server listening path=/Users/kbragg/.config/herdr/herdr.sock
+2026-06-28T01:01:38.244318Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-06-28T01:01:38.248062Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=7431
+2026-06-28T01:01:38.249195Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-06-28T01:01:38.249252Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-06-28T01:01:38.274328Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-28T01:01:38.274927Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/Users/kbragg/.dotfiles/.config/nvim
+2026-06-28T01:01:38.275061Z  INFO herdr::server::headless: client protocol socket listening path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-28T01:01:38.275076Z  INFO herdr::server::headless: herdr server started api_socket=/Users/kbragg/.config/herdr/herdr.sock client_socket=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-28T01:01:38.275107Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=7430
+2026-06-28T01:01:38.297626Z  INFO herdr::server::headless: client connected client_id=2 cols=122 rows=41 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-06-28T01:02:11.209276Z  INFO herdr::server::headless: client resize client_id=2 cols=187 rows=54 cell_width_px=0 cell_height_px=0
+2026-06-28T01:31:38.213656Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-28T02:01:38.153623Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-28T02:31:43.433358Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-28T02:50:07.756229Z  INFO herdr::server::headless: client detach requested via keybind client_id=2
+2026-06-28T02:50:07.762978Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-06-28T02:50:11.062140Z  INFO herdr::server::headless: client connected client_id=4 cols=187 rows=54 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-06-28T02:50:19.676608Z  INFO herdr::server::headless: client detach requested via keybind client_id=4
+2026-06-28T02:50:19.679497Z  INFO herdr::server::headless: client disconnected client_id=4
+2026-06-28T02:52:54.682606Z  INFO herdr::server::headless: client connected client_id=6 cols=187 rows=54 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-06-28T02:53:02.692332Z  INFO herdr::server::headless: client detach requested via keybind client_id=6
+2026-06-28T02:53:02.696226Z  INFO herdr::server::headless: client disconnected client_id=6

@@ -1,0 +1,40 @@
+2026-06-26T01:09:59.284266Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=3941
+2026-06-26T01:09:59.284324Z  INFO herdr::client: connecting to server path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:09:59.309519Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-06-26T01:10:27.972227Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=3941
+2026-06-26T01:10:34.439851Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=6792
+2026-06-26T01:10:34.439883Z  INFO herdr::client: connecting to server path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:10:34.607141Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-06-26T01:10:45.075151Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=6792
+2026-06-26T01:11:25.127196Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=7437
+2026-06-26T01:11:25.127344Z  INFO herdr::client: connecting to server path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:11:25.128402Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-06-26T01:17:22.596684Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=7437
+2026-06-26T01:17:24.149211Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[0].command; disabling custom command
+2026-06-26T01:17:24.149365Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[1].command; disabling custom command
+2026-06-26T01:17:24.149505Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=10235
+2026-06-26T01:17:24.149537Z  INFO herdr::client: connecting to server path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:17:24.377954Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-06-26T01:18:25.848086Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=10235
+2026-06-26T01:18:27.737590Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[0].command; disabling custom command
+2026-06-26T01:18:27.737636Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[1].command; disabling custom command
+2026-06-26T01:18:27.737688Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=10728
+2026-06-26T01:18:27.737701Z  INFO herdr::client: connecting to server path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:18:27.765329Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-06-26T01:19:30.508455Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=10728
+2026-06-26T01:19:31.601766Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=11410
+2026-06-26T01:19:31.601804Z  INFO herdr::client: connecting to server path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-26T01:19:31.617154Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-06-26T02:19:36.133877Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=11410
+2026-06-28T01:01:38.281715Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=7428
+2026-06-28T01:01:38.281888Z  INFO herdr::client: connecting to server path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-28T01:01:38.297363Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-06-28T02:50:07.759232Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=7428
+2026-06-28T02:50:11.025207Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=57617
+2026-06-28T02:50:11.025346Z  INFO herdr::client: connecting to server path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-28T02:50:11.062102Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-06-28T02:50:19.677363Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=57617
+2026-06-28T02:52:54.437579Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=57843
+2026-06-28T02:52:54.437664Z  INFO herdr::client: connecting to server path=/Users/kbragg/.config/herdr/herdr-client.sock
+2026-06-28T02:52:54.682594Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-06-28T02:53:02.693405Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=57843
