@@ -25,6 +25,7 @@ local highlights = {
   Constant = { fg = colors.peach },
   Title = { fg = colors.orange, bold = true },
   NonText = { fg = colors.gray_dark },
+  Special = { fg = colors.magenta },
 
   -- UI Elements
   Visual = { bg = colors.gray_darker },
@@ -83,7 +84,6 @@ local highlights = {
   CmpItemKindText = { fg = colors.fg_dim },
   CmpGhostText = { fg = colors.gray, italic = true },
 
-  -- Blink.cmp
   BlinkCmpLabel = { fg = colors.fg },
   BlinkCmpLabelMatch = { fg = colors.blue_light, bold = true },
   BlinkCmpLabelDetail = { fg = colors.fg_dim },
