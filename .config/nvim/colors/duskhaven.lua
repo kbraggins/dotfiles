@@ -125,16 +125,42 @@ local highlights = {
   ["@tag.attribute"] = { fg = colors.peach },
   ["@tag.delimiter"] = { fg = colors.magenta },
 
+  -- Lazy.nvim
+  LazyNormal = { fg = colors.fg, bg = colors.bg_dark },
+  LazyBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+  LazyButton = { fg = colors.fg, bg = colors.bg_light },
+  LazyButtonActive = { fg = colors.fg, bg = colors.blue_light, bold = true },
+
+  LazyH1 = { fg = colors.orange, bold = true }, -- Main title
+  LazyH2 = { fg = colors.blue_light, bold = true }, -- Section headers
+
+  LazyComment = { fg = colors.gray },
+  LazyCommit = { fg = colors.blue },
+  LazyCommitIssue = { fg = colors.orange },
+  LazyCommitScope = { fg = colors.fg_dim, italic = true },
+
+  LazyProgressDone = { fg = colors.green },
+  LazyProgressTodo = { fg = colors.gray },
+
+  LazySpecial = { fg = colors.magenta },
+  LazyValue = { fg = colors.peach },
+  LazyReason = { fg = colors.fg_dim },
+  LazyReasonKeys = { fg = colors.yellow },
+  LazyReasonPlugin = { fg = colors.blue_light },
+  LazyReasonRuntime = { fg = colors.gray },
+  LazyReasonSource = { fg = colors.orange },
+  LazyReasonStart = { fg = colors.green },
+
   -- NeoTree
-  NeoTreeDirectoryName = { fg = colors.yellow },
-  NeoTreeFileName = { fg = colors.orange },
-  NeoTreeFileNameOpened = { fg = colors.fg },
-  NeoTreeDotfile = { fg = colors.gray },
-  NeoTreeRootName = { fg = colors.magenta },
+  NeoTreeDirectoryName = { fg = colors.yellow, bold = true },
+  NeoTreeFileName = { fg = colors.fg },
+  NeoTreeFileNameOpened = { fg = colors.blue, bold = true },
+  NeoTreeDotfile = { fg = colors.gray_dark },
+  NeoTreeRootName = { fg = colors.magenta, bold = true },
   NeoTreeFloatBorder = { fg = colors.blue_light },
-  NeoTreeWinSeparator = { fg = colors.blue_light },
-  NeoTreeIndentMarker = { fg = colors.magenta },
-  NeoTreeExpander = { fg = colors.magenta },
+  NeoTreeWinSeparator = { fg = colors.blue_dark },
+  NeoTreeIndentMarker = { fg = colors.gray_dark },
+  NeoTreeExpander = { fg = colors.gray },
 
   NeoTreeGitAdded = { fg = colors.green },
   NeoTreeGitUntracked = { fg = colors.green, italic = true },
