@@ -33,6 +33,8 @@ local highlights = {
   Search = { fg = colors.bg, bg = colors.yellow },
   IncSearch = { fg = colors.bg, bg = colors.orange },
   CmdlineBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+  FloatBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+  WinSeparator = { fg = colors.blue_dark },
 
   -- Statusline / Tabline
   StatusLine = { fg = colors.fg_dim, bg = colors.bg_dark },
@@ -57,7 +59,6 @@ local highlights = {
   PmenuSel = { fg = colors.fg, bg = colors.bg_light, bold = true },
   PmenuBorder = { fg = colors.blue_light, bg = colors.bg_dark },
   PmenuThumb = { bg = colors.gray_dark },
-  FloatBorder = { fg = colors.blue_light, bg = colors.bg_dark },
 
   CmpItemAbbr = { fg = colors.fg },
   CmpItemAbbrDeprecated = { fg = colors.gray, strikethrough = true },
@@ -151,6 +152,63 @@ local highlights = {
   LazyReasonSource = { fg = colors.orange },
   LazyReasonStart = { fg = colors.green },
 
+  -- Snacks Dashboard
+  SnacksDashboardHeader = { fg = colors.orange },
+  SnacksDashboardIcon = { fg = colors.yellow },
+  SnacksDashboardDesc = { fg = colors.orange },
+  SnacksDashboardKey = { fg = colors.yellow },
+  SnacksDashboardFooter = { fg = colors.yellow },
+  SnacksDashboardSpecial = { fg = colors.magenta },
+
+  -- Snacks Explorer (LazyVim default file tree)
+  SnacksExplorer = { fg = colors.fg, bg = colors.bg_dark },
+  SnacksExplorerBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+
+  SnacksExplorerDir = { fg = colors.yellow, bold = true },
+  SnacksExplorerFile = { fg = colors.fg },
+  SnacksExplorerFileOpened = { fg = colors.blue, bold = true },
+  SnacksExplorerHidden = { fg = colors.gray_dark },
+  SnacksExplorerRoot = { fg = colors.magenta, bold = true },
+
+  SnacksExplorerIndent = { fg = colors.gray_dark },
+  SnacksExplorerExpander = { fg = colors.gray },
+
+  SnacksExplorerGitAdded = { fg = colors.green },
+  SnacksExplorerGitUntracked = { fg = colors.green, italic = true },
+  SnacksExplorerGitModified = { fg = colors.cream },
+  SnacksExplorerGitDeleted = { fg = colors.red },
+  SnacksExplorerGitIgnored = { fg = colors.gray_dark },
+
+  SnacksExplorerCursor = { fg = colors.fg, bg = colors.bg_light, bold = true },
+  SnacksExplorerCursorLine = { bg = colors.bg_light },
+  SnacksExplorerCursorLineNr = { fg = colors.yellow, bold = true },
+
+  -- Snacks Picker (fuzzy finder, grep, etc.)
+  SnacksPicker = { fg = colors.fg, bg = colors.bg_dark },
+  SnacksPickerBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+  SnacksPickerTitle = { fg = colors.orange, bold = true },
+  SnacksPickerPrompt = { fg = colors.fg, bg = colors.bg_light },
+
+  SnacksPickerCursor = { fg = colors.bg, bg = colors.orange },
+  SnacksPickerCursorLine = { bg = colors.bg_light },
+  SnacksPickerCursorLineNr = { fg = colors.yellow, bold = true },
+
+  SnacksPickerMatch = { fg = colors.blue_light, bold = true },
+  SnacksPickerSelected = { fg = colors.fg, bg = colors.bg_light, bold = true },
+
+  -- Preview window in picker
+  SnacksPickerPreview = { fg = colors.fg, bg = colors.bg_dark },
+  SnacksPickerPreviewBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+  SnacksPickerPreviewTitle = { fg = colors.orange, bold = true },
+
+  -- Input / Search bar
+  SnacksPickerInput = { fg = colors.fg, bg = colors.bg_dark },
+  SnacksPickerInputBorder = { fg = colors.orange, bg = colors.bg_dark },
+
+  -- Help / Footer
+  SnacksPickerHelp = { fg = colors.fg_dim },
+  SnacksPickerHelpBorder = { fg = colors.gray },
+
   -- NeoTree
   NeoTreeDirectoryName = { fg = colors.yellow, bold = true },
   NeoTreeFileName = { fg = colors.fg },
@@ -167,14 +225,6 @@ local highlights = {
   NeoTreeGitModified = { fg = colors.cream },
   NeoTreeGitDeleted = { fg = colors.red },
   NeoTreeGitIgnored = { fg = colors.gray_dark },
-
-  -- Snacks.nvim
-  SnacksDashboardHeader = { fg = colors.orange },
-  SnacksDashboardIcon = { fg = colors.yellow },
-  SnacksDashboardDesc = { fg = colors.orange },
-  SnacksDashboardKey = { fg = colors.yellow },
-  SnacksDashboardFooter = { fg = colors.yellow },
-  SnacksDashboardSpecial = { fg = colors.magenta },
 
   -- WhichKey
   WhichKey = { fg = colors.yellow },
