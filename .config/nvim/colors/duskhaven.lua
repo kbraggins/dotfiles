@@ -161,8 +161,8 @@ local highlights = {
   SnacksDashboardSpecial = { fg = colors.magenta },
 
   -- Snacks Picker
-  SnacksPicker = { fg = colors.fg },
-  SnacksPickerBorder = { fg = colors.blue_light },
+  SnacksPicker = { fg = colors.fg, bg = colors.bg_dark },
+  SnacksPickerBorder = { fg = colors.blue_light, bg = colors.bg_dark },
   SnacksPickerTitle = { fg = colors.orange, bold = true },
   SnacksPickerPrompt = { fg = colors.magenta },
   SnacksPickerTree = { fg = colors.gray_dark },
