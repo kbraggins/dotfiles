@@ -160,7 +160,41 @@ local highlights = {
   SnacksDashboardFooter = { fg = colors.yellow },
   SnacksDashboardSpecial = { fg = colors.magenta },
 
-  -- Snacks Explorer (LazyVim default file tree)
+  -- Snacks Picker
+  SnacksPicker = { fg = colors.fg },
+  SnacksPickerBorder = { fg = colors.blue_light },
+  SnacksPickerTitle = { fg = colors.orange, bold = true },
+  SnacksPickerPrompt = { fg = colors.magenta },
+  SnacksPickerTree = { fg = colors.gray_dark },
+  SnacksPickerDirectory = { fg = colors.yellow },
+
+  SnacksPickerCursor = { fg = colors.bg, bg = colors.orange },
+  SnacksPickerCursorLine = { bg = colors.bg_light },
+  SnacksPickerCursorLineNr = { fg = colors.yellow, bold = true },
+
+  SnacksPickerMatch = { fg = colors.blue_light, bold = true },
+  SnacksPickerSelected = { fg = colors.fg, bg = colors.bg_light, bold = true },
+
+  SnacksPickerGitStatusAdded = { fg = colors.green },
+  SnacksPickerGitStatusUntracked = { fg = colors.green, italic = true },
+  SnacksPickerGitStatusModified = { fg = colors.cream },
+  SnacksPickerGitStatusDeleted = { fg = colors.red },
+  SnacksPickerGitStatusIgnored = { fg = colors.gray_dark },
+
+  -- Preview window in picker
+  SnacksPickerPreview = { fg = colors.fg, bg = colors.bg_dark },
+  SnacksPickerPreviewBorder = { fg = colors.blue_light, bg = colors.bg_dark },
+  SnacksPickerPreviewTitle = { fg = colors.orange, bold = true },
+
+  -- Input / Search bar
+  SnacksPickerInput = { fg = colors.fg, bg = colors.bg_dark },
+  SnacksPickerInputBorder = { fg = colors.orange, bg = colors.bg_dark },
+
+  -- Help / Footer
+  SnacksPickerHelp = { fg = colors.fg_dim },
+  SnacksPickerHelpBorder = { fg = colors.gray },
+
+  -- Snacks Explorer
   SnacksExplorer = { fg = colors.fg, bg = colors.bg_dark },
   SnacksExplorerBorder = { fg = colors.blue_light, bg = colors.bg_dark },
 
@@ -182,32 +216,6 @@ local highlights = {
   SnacksExplorerCursor = { fg = colors.fg, bg = colors.bg_light, bold = true },
   SnacksExplorerCursorLine = { bg = colors.bg_light },
   SnacksExplorerCursorLineNr = { fg = colors.yellow, bold = true },
-
-  -- Snacks Picker (fuzzy finder, grep, etc.)
-  SnacksPicker = { fg = colors.fg, bg = colors.bg_dark },
-  SnacksPickerBorder = { fg = colors.blue_light, bg = colors.bg_dark },
-  SnacksPickerTitle = { fg = colors.orange, bold = true },
-  SnacksPickerPrompt = { fg = colors.fg, bg = colors.bg_light },
-
-  SnacksPickerCursor = { fg = colors.bg, bg = colors.orange },
-  SnacksPickerCursorLine = { bg = colors.bg_light },
-  SnacksPickerCursorLineNr = { fg = colors.yellow, bold = true },
-
-  SnacksPickerMatch = { fg = colors.blue_light, bold = true },
-  SnacksPickerSelected = { fg = colors.fg, bg = colors.bg_light, bold = true },
-
-  -- Preview window in picker
-  SnacksPickerPreview = { fg = colors.fg, bg = colors.bg_dark },
-  SnacksPickerPreviewBorder = { fg = colors.blue_light, bg = colors.bg_dark },
-  SnacksPickerPreviewTitle = { fg = colors.orange, bold = true },
-
-  -- Input / Search bar
-  SnacksPickerInput = { fg = colors.fg, bg = colors.bg_dark },
-  SnacksPickerInputBorder = { fg = colors.orange, bg = colors.bg_dark },
-
-  -- Help / Footer
-  SnacksPickerHelp = { fg = colors.fg_dim },
-  SnacksPickerHelpBorder = { fg = colors.gray },
 
   -- NeoTree
   NeoTreeDirectoryName = { fg = colors.yellow, bold = true },
@@ -280,8 +288,9 @@ local highlights = {
   TelescopeMatching = { fg = colors.blue_light, bold = true },
 
   -- noice.nvim
-  NoiceCmdlinePopupBorder = { fg = colors.blue_light, bg = colors.bg_dark },
-  NoiceCmdlinePopupBorderSearch = { fg = colors.orange, bg = colors.bg_dark },
+  NoiceCmdlinePopupBorder = { fg = colors.blue_light },
+  NoiceCmdlinePopupBorderSearch = { fg = colors.orange },
+  NoiceCmdlineIcon = { fg = colors.magenta },
 }
 
 -- Apply highlights
