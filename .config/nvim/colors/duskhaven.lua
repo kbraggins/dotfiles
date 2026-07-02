@@ -167,6 +167,7 @@ local highlights = {
   SnacksPickerPrompt = { fg = colors.magenta },
   SnacksPickerTree = { fg = colors.gray_dark },
   SnacksPickerDirectory = { fg = colors.yellow },
+  SnacksPickerDir = { fg = colors.yellow },
 
   SnacksPickerCursor = { fg = colors.bg, bg = colors.orange },
   SnacksPickerCursorLine = { bg = colors.bg_light },
