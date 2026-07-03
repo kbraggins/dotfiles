@@ -1,4 +1,11 @@
 return {
+
+  -- duskhaven.nvim
+  {
+    "kbraggins/duskhaven.nvim",
+    lazy = false,
+  },
+
   -- add gruvbox
   {
     "ellisonleao/gruvbox.nvim",
