@@ -2,3 +2,5 @@
 !.tmux/plugins/tpm
 
 *.log
+
+.config/herdr/*.json
