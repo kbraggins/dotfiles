@@ -88,8 +88,12 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+alias vi="nvim"
+
 alias ls="eza --icons=always"
 alias cd="z"
+
+alias cat="bat"
 
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
