@@ -3,6 +3,7 @@ return {
   -- duskhaven.nvim
   {
     "kbraggins/duskhaven.nvim",
+    dir = "~/dev/lua/duskhaven.nvim",
     lazy = false,
   },
 
