@@ -1,129 +1,166 @@
 # Duskhaven Yazi Theme
+# Palette source: ~/dev/lua/duskhaven.nvim/lua/duskhaven/palette.lua
+#   bg=#0c1021 bg_light=#1a1f35 bg_dark=#0a0d1a fg=#fdfff1 fg_dim=#d8d9c8
+#   orange=#f25e01 yellow=#b3f63a magenta=#ff0cac blue=#6b8ab8 blue_light=#97c7e9
+#   blue_dark=#3c5ea9 red=#e04a5f green=#55ba30 peach=#f5c6b0 cream=#f8e9c7
+#   gray=#a4a7a7 gray_dark=#505257 gray_darker=#35384a black=#272822
 
-[manager]
+[app]
+overall = { bg = "#0c1021" } # bg
+
+
+[mgr]
 cwd = { fg = "#ff0cac", italic = true } # magenta
 
 syntect_theme = "~/.config/yazi/duskhaven.tmTheme"
 
-hovered = { bg = "#1a1f35", fg = "#fdfff1", bold = true } # bg_light, fg
-preview_hovered = { bg = "#1a1f35" }                      # bg_light
+# Hovered
+hovered         = { bg = "#1a1f35", fg = "#fdfff1", bold = true } # bg_light, fg
+preview_hovered = { bg = "#1a1f35" }                              # bg_light
 
-# Find / Search (Matches NeoTree / Search highlights)
-find_keyword = { fg = "#b3f63a", bold = true, italic = true, underline = true } # yellow
-find_position = { fg = "#ff0cac", bg = "reset", italic = true }                 # magenta
+# Find
+find_keyword  = { fg = "#b3f63a", bold = true, italic = true, underline = true } # yellow
+find_position = { fg = "#ff0cac", bg = "reset", italic = true }                  # magenta
 
-# Markers
-marker_copied = { fg = "#55ba30", bg = "#55ba30" }   # green
-marker_cut = { fg = "#e04a5f", bg = "#e04a5f" }      # red
-marker_marked = { fg = "#97c7e9", bg = "#97c7e9" }   # blue_light
+# Marker
+marker_copied   = { fg = "#55ba30", bg = "#55ba30" } # green
+marker_cut      = { fg = "#e04a5f", bg = "#e04a5f" } # red
+marker_marked   = { fg = "#97c7e9", bg = "#97c7e9" } # blue_light
 marker_selected = { fg = "#f25e01", bg = "#f25e01" } # orange
 
-# Tabline (Matches nvim TabLine/TabLineSel)
-tab_active = { bg = "#1a1f35", fg = "#fdfff1", bold = true } # bg_light, fg
-tab_inactive = { bg = "#0a0d1a", fg = "#a4a7a7" }            # bg_dark, gray
+# Count
+count_copied   = { fg = "#0a0d1a", bg = "#55ba30" } # bg_dark, green
+count_cut      = { fg = "#0a0d1a", bg = "#e04a5f" } # bg_dark, red
+count_selected = { fg = "#0a0d1a", bg = "#f25e01" } # bg_dark, orange
 
-# Borders
+# Border
 border_symbol = "│"
-border_style = { fg = "#505257" } # gray_dark
+border_style  = { fg = "#505257" } # gray_dark
+
+
+[tabs]
+active   = { bg = "#1a1f35", fg = "#fdfff1", bold = true } # bg_light, fg
+inactive = { bg = "#0a0d1a", fg = "#a4a7a7" }              # bg_dark, gray
+
+
+[mode]
+normal_main = { fg = "#0a0d1a", bg = "#6b8ab8", bold = true } # bg_dark, blue
+normal_alt  = { fg = "#6b8ab8", bg = "#35384a" }               # blue, gray_darker
+
+select_main = { fg = "#0a0d1a", bg = "#f25e01", bold = true } # bg_dark, orange
+select_alt  = { fg = "#f25e01", bg = "#35384a" }               # orange, gray_darker
+
+unset_main = { fg = "#0a0d1a", bg = "#a4a7a7", bold = true } # bg_dark, gray
+unset_alt  = { fg = "#a4a7a7", bg = "#35384a" }              # gray, gray_darker
+
+
+[indicator]
+parent  = { fg = "#0a0d1a", bg = "#97c7e9" } # bg_dark, blue_light
+current = { fg = "#0a0d1a", bg = "#6b8ab8" } # bg_dark, blue
+preview = { fg = "#0a0d1a", bg = "#97c7e9" } # bg_dark, blue_light
+
 
 [status]
-separator_open = ""
-separator_close = ""
-separator_style = { fg = "#35384a", bg = "#35384a" } # gray_darker
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
 
-# Modes
-mode_normal = { bg = "#6b8ab8", fg = "#0a0d1a", bold = true } # blue, bg_dark
-mode_select = { bg = "#f25e01", fg = "#0a0d1a", bold = true } # orange, bg_dark
-mode_unset = { bg = "#a4a7a7", fg = "#0a0d1a", bold = true }  # gray, bg_dark
+progress_label  = { fg = "#fdfff1", bold = true }               # fg
+progress_normal = { fg = "#6b8ab8", bg = "#35384a" }            # blue, gray_darker
+progress_error  = { fg = "#e04a5f", bg = "#35384a" }            # red, gray_darker
 
-progress_label = { fg = "#fdfff1", bold = true }     # fg
-progress_normal = { fg = "#6b8ab8", bg = "#35384a" } # blue
-progress_error = { fg = "#e04a5f", bg = "#35384a" }  # red
-
-# Permissions
-permissions_t = { fg = "#6b8ab8" } # blue
-permissions_r = { fg = "#b3f63a" } # yellow
-permissions_w = { fg = "#e04a5f" } # red
-permissions_x = { fg = "#55ba30" } # green
-permissions_s = { fg = "#505257" } # gray_dark
-
-
-[select]
-# Matches nvim TelescopeBorder
-border = { fg = "#97c7e9" }                              # blue_light
-active = { fg = "#fdfff1", bg = "#1a1f35", bold = true } # fg, bg_light
-inactive = { fg = "#d8d9c8" }                            # fg_dim
+perm_type  = { fg = "#6b8ab8" } # blue
+perm_read  = { fg = "#b3f63a" } # yellow
+perm_write = { fg = "#e04a5f" } # red
+perm_exec  = { fg = "#55ba30" } # green
+perm_sep   = { fg = "#505257" } # gray_dark
 
 
 [input]
 # Matches nvim TelescopePromptBorder
-border = { fg = "#f25e01" }             # orange
-title = { fg = "#f25e01", bold = true }
-value = { fg = "#fdfff1" }              # fg
-selected = { bg = "#35384a" }           # gray_darker
+border   = { fg = "#f25e01" }             # orange
+title    = { fg = "#f25e01", bold = true }
+value    = { fg = "#fdfff1" }             # fg
+selected = { bg = "#35384a" }             # gray_darker
 
 
-[completion]
+[pick]
+# Matches nvim TelescopeBorder
+border   = { fg = "#97c7e9" }                             # blue_light
+active   = { fg = "#fdfff1", bg = "#1a1f35", bold = true } # fg, bg_light
+inactive = { fg = "#d8d9c8" }                             # fg_dim
+
+
+[confirm]
+border  = { fg = "#97c7e9" }                              # blue_light
+title   = { fg = "#97c7e9", bold = true }
+body    = {}
+list    = {}
+btn_yes = { reversed = true }
+btn_no  = {}
+
+
+[cmp]
 # Matches Pmenu/Cmp
-border = { fg = "#97c7e9" }                              # blue_light
-active = { fg = "#fdfff1", bg = "#1a1f35", bold = true } # fg, bg_light
-inactive = { fg = "#d8d9c8" }                            # fg_dim
-icon_file = ""
-icon_folder = ""
-icon_command = ""
+border = { fg = "#97c7e9" } # blue_light
 
 
 [tasks]
-border = { fg = "#97c7e9" }                               # blue_light
-title = { fg = "#97c7e9", bold = true }
+border  = { fg = "#97c7e9" }                              # blue_light
+title   = { fg = "#97c7e9", bold = true }
 hovered = { fg = "#fdfff1", bg = "#1a1f35", bold = true } # fg, bg_light
 
 
 [which]
 # Matches nvim WhichKey highlights
-mask = { bg = "#0a0d1a" }            # bg_dark
-cand = { fg = "#b3f63a" }            # yellow
-rest = { fg = "#97c7e9" }            # blue_light
-desc = { fg = "#d8d9c8" }            # fg_dim
-separator = "  "
+mask            = { bg = "#0a0d1a" } # bg_dark
+cand            = { fg = "#b3f63a" } # yellow
+rest            = { fg = "#97c7e9" } # blue_light
+desc            = { fg = "#d8d9c8" } # fg_dim
+separator       = "  "
 separator_style = { fg = "#505257" } # gray_dark
 
 
 [help]
-appearance = { bg = "#0a0d1a" }                           # bg_dark
-empty = { fg = "#505257" }                                # gray_dark
-desc = { fg = "#a4a7a7" }                                 # gray
+on      = { fg = "#97c7e9" }                              # blue_light
+run     = { fg = "#ff0cac" }                              # magenta
+desc    = { fg = "#a4a7a7" }                              # gray
 hovered = { bg = "#1a1f35", fg = "#fdfff1", bold = true } # bg_light, fg
-footer = { fg = "#d8d9c8", bg = "#0c1021" }               # fg_dim, bg
+footer  = { fg = "#d8d9c8", bg = "#0c1021" }              # fg_dim, bg
 
 
 [notify]
 # Matches Diagnostic highlights
-title_info = { fg = "#f8e9c7" }  # cream
-title_warn = { fg = "#b3f63a" }  # yellow
+title_info  = { fg = "#f8e9c7" } # cream
+title_warn  = { fg = "#b3f63a" } # yellow
 title_error = { fg = "#e04a5f" } # red
-icon_info = ""
-icon_warn = ""
-icon_error = ""
 
 
 [filetype]
 rules = [
   # General filetypes
-  { mime = "image/*", fg = "#97c7e9" },                     # blue_light
-  { mime = "video/*", fg = "#f5c6b0" },                     # peach
-  { mime = "audio/*", fg = "#ff0cac" },                     # magenta
-  { mime = "application/zip", fg = "#e04a5f" },             # red
-  { mime = "application/gzip", fg = "#e04a5f" },
-  { mime = "application/x-tar", fg = "#e04a5f" },
-  { mime = "application/x-bzip", fg = "#e04a5f" },
-  { mime = "application/x-bzip2", fg = "#e04a5f" },
-  { mime = "application/x-7z-compressed", fg = "#e04a5f" },
-  { mime = "application/x-rar", fg = "#e04a5f" },
+  { mime = "image/*", fg = "#97c7e9" },                                # blue_light
+  { mime = "video/*", fg = "#f5c6b0" },                                # peach
+  { mime = "audio/*", fg = "#ff0cac" },                                # magenta
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#e04a5f" }, # red
+  { mime = "application/{pdf,doc,rtf}", fg = "#55ba30" },              # green
+  { mime = "vfs/{absent,stale}", fg = "#505257" },                     # gray_dark
+
+  # Special file
+  { url = "*", is = "orphan", bg = "#e04a5f" },
+  { url = "*", is = "exec", fg = "#55ba30" }, # green
+  { url = "*", is = "dummy", bg = "#e04a5f" },
+  { url = "*/", is = "dummy", bg = "#e04a5f" },
 
   # Fallbacks based on NeoTree mappings
-  { url = ".*", fg = "#a4a7a7" },             # gray (NeoTreeDotfile)
-  { url = "*/", fg = "#b3f63a" },             # yellow (NeoTreeDirectoryName)
-  { url = "*", is = "exec", fg = "#55ba30" }, # green 
+  { url = ".*", fg = "#a4a7a7" }, # gray (NeoTreeDotfile)
+  { url = "*/", fg = "#b3f63a" }, # yellow (NeoTreeDirectoryName)
   { url = "*", is = "link", fg = "#97c7e9" }, # blue_light (Symlink)
+  { url = "*", fg = "#fdfff1" },              # fg
 ]
+
+
+[spot]
+border   = { fg = "#97c7e9" }                          # blue_light
+title    = { fg = "#97c7e9", bold = true }
+tbl_cell = { fg = "#97c7e9", reversed = true }
+tbl_col  = { bold = true }
