@@ -9,15 +9,32 @@ onboarding = false
 # Built-in themes: catppuccin, terminal, tokyo-night, dracula, nord,
 #                  gruvbox, one-dark, solarized, kanagawa, rose-pine,
 #                  vesper
-name = "catppuccin"
+#
+# herdr has no mechanism to register a wholly new theme name, so "duskhaven"
+# can't appear in this list. name = "tokyo-night" is just a placeholder base;
+# [theme.custom] below overrides every color token the theme system exposes,
+# so none of tokyo-night's own colors show through.
+name = "tokyo-night"
 
-# Override individual color tokens on top of the base theme.
-# Accepts: hex (#rrggbb), named colors, rgb(r,g,b), or panel_bg = "reset"
-# [theme.custom]
-# panel_bg = "reset"
-# accent = "#f5c2e7"
-# red = "#ff6188"
-# green = "#a6e3a1"
+# Duskhaven, layered on top of the tokyo-night placeholder (see note above).
+# Palette source: ~/dev/lua/duskhaven.nvim/lua/duskhaven/palette.lua
+[theme.custom]
+panel_bg    = "#0c1021" # bg
+surface0    = "#1a1f35" # bg_light
+surface1    = "#35384a" # gray_darker
+surface_dim = "#0a0d1a" # bg_dark
+overlay0    = "#505257" # gray_dark
+overlay1    = "#a4a7a7" # gray
+text        = "#fdfff1" # fg
+subtext0    = "#d8d9c8" # fg_dim
+accent      = "#f25e01" # orange
+mauve       = "#ff0cac" # magenta
+green       = "#55ba30" # green
+yellow      = "#b3f63a" # yellow
+red         = "#e04a5f" # red
+blue        = "#6b8ab8" # blue
+teal        = "#97c7e9" # blue_light
+peach       = "#f5c6b0" # peach
 
 [terminal]
 # Executable used for new interactive panes.
