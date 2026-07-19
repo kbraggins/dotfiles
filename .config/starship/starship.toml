@@ -52,8 +52,9 @@ vimcmd_symbol = "[❮](bold fg:yellow)"
 disabled = false
 
 [time]
-disabled = true
-time_format = "%R"
+disabled = false
+use_12hr = true
+# time_format = "%R"
 format = "[[  $time ](fg:yellow bg:foam)]($style)"
 
 [custom.giturl]
