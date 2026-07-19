@@ -15,18 +15,31 @@ A simplified view of the structure:
 ```text
 ~/.dotfiles/
 ├── .config/
-│   └── nvim/        → Symlinked to ~/.config/nvim/
+│   ├── ghostty/     → Symlinked to ~/.config/ghostty/
+│   ├── herdr/       → Symlinked to ~/.config/herdr/
+│   ├── nvim/        → Symlinked to ~/.config/nvim/
+│   ├── starship/    → Symlinked to ~/.config/starship/
+│   └── yazi/        → Symlinked to ~/.config/yazi/
+├── .tmux/           → Symlinked to ~/.tmux/ (includes tpm as a git submodule)
+├── .tmux.conf       → Symlinked to ~/.tmux.conf
+├── .warp/           → Symlinked to ~/.warp/ (alternative terminal config, kept alongside Ghostty)
 ├── .zshrc           → Symlinked to ~/.zshrc
 └── README.md
 ```
 
+> **Note:** `.stow-local-ignore` tells Stow which files in this repo should never be symlinked (README, LICENSE, git metadata, `.DS_Store`, etc.), so only actual config gets linked into `~/`.
+
 ## 🚀 Setup & Installation
 
 **1. Clone the repository**
-Clone this repository into your home directory as a hidden folder (`~/.dotfiles`):
+Clone this repository into your home directory as a hidden folder (`~/.dotfiles`). This repo uses a git submodule for the tmux plugin manager (`tpm`), so clone with `--recurse-submodules`:
 ```bash
-git clone https://git.braggnet.net/kbragg/dotfiles.git ~/.dotfiles
+git clone --recurse-submodules https://github.com/kbraggins/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
+```
+If you already cloned without that flag, fetch the submodule with:
+```bash
+git submodule update --init --recursive
 ```
 
 **2. Install GNU Stow**
