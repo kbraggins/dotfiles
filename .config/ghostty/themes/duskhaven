@@ -13,25 +13,25 @@ selection-background = #1a1f35
 selection-foreground = #fdfff1
 
 # ANSI Color Palette (0-15)
-# bg
-palette = 0=#0c1021
+# black
+palette = 0=#272822
 # red
 palette = 1=#e04a5f
 # green
 palette = 2=#55ba30
-# cream
-palette = 3=#f8e9c7
+# yellow
+palette = 3=#b3f63a
 # blue
 palette = 4=#6b8ab8
 # magenta
 palette = 5=#ff0cac
-# cyan (blue_light)
-palette = 6=#97c7e9
+# cyan (blue_dark)
+palette = 6=#3c5ea9
 # gray
 palette = 7=#a4a7a7
 
-# bright black (gray)
-palette = 8=#a4a7a7
+# bright black (gray_dark)
+palette = 8=#505257
 # bright red
 palette = 9=#e04a5f
 # bright green
@@ -42,7 +42,7 @@ palette = 11=#b3f63a
 palette = 12=#97c7e9
 # bright magenta
 palette = 13=#ff0cac
-# bright cyan (slightly brighter)
-palette = 14=#a8d6ff
+# bright cyan (blue_light)
+palette = 14=#97c7e9
 # bright white (fg)
 palette = 15=#fdfff1
