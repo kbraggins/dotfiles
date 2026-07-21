@@ -1,6 +1,6 @@
 "$schema" = "https://starship.rs/config-schema.json"
 scan_timeout = 100
-command_timeout = 500
+command_timeout = 1000
 follow_symlinks = false
 add_newline = false
 palette = "duskhaven"
@@ -18,9 +18,18 @@ $character\
 """
 right_format = """$all"""
 
+# ----- Core Prompt -----
+
+[character]
+disabled = false
+success_symbol = "[❯](bold fg:green)"
+error_symbol = "[❯](bold fg:red)"
+vimcmd_symbol = "[❮](bold fg:yellow)"
+
 [directory]
+read_only = " 󰌾"
 style = "fg:teal bg:base"
-format = "[  $path ]($style)"
+format = "[  $path ]($style)"
 truncation_length = 4
 truncation_symbol = "…/"
 
@@ -32,6 +41,81 @@ truncation_symbol = "…/"
 "Developer" = "󰲋 "
 "Others" = " "
 
+[hostname]
+ssh_symbol = " "
+
+[line_break]
+disabled = false
+
+[os]
+disabled = true
+
+[os.symbols]
+AIX = " "
+AlmaLinux = " "
+Alpaquita = " "
+Alpine = " "
+ALTLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+Bluefin = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Elementary = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = " "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = " "
+InstantOS = " "
+Ios = "󰀷 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = " "
+OpenCloudOS = " "
+openEuler = " "
+openSUSE = " "
+OracleLinux = "󰺡 "
+PikaOS = " "
+Pop = " "
+Raspbian = " "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
+Redox = "󰀘 "
+RockyLinux = " "
+Solus = " "
+SUSE = " "
+Ubuntu = " "
+Ultramarine = " "
+Unknown = " "
+Uos = " "
+Void = " "
+Windows = "󰍲 "
+Zorin = " "
+
+[time]
+disabled = false
+use_12hr = true
+# time_format = "%R"
+format = "[[  $time ](fg:yellow bg:foam)]($style)"
+
 [username]
 disabled = true
 show_always = true
@@ -39,23 +123,24 @@ style_user = "bg:surface0 fg:text"
 style_root = "bg:surface0 fg:text"
 format = " $user "
 
-[line_break]
-disabled = false
+# ----- Git & Version Control -----
 
-[character]
-disabled = false
-success_symbol = "[❯](bold fg:green)"
-error_symbol = "[❯](bold fg:red)"
-vimcmd_symbol = "[❮](bold fg:yellow)"
-
-[package]
-disabled = false
-
-[time]
-disabled = false
-use_12hr = true
-# time_format = "%R"
-format = "[[  $time ](fg:yellow bg:foam)]($style)"
+[custom.git_worktree]
+description = "Show indicator when inside a git worktree"
+command = """
+if git rev-parse --git-dir >/dev/null 2>&1; then
+      common_dir=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null)
+      git_dir=$(git rev-parse --path-format=absolute --git-dir 2>/dev/null)
+      if [ "$common_dir" != "$git_dir" ]; then
+            echo "⛓ "
+      fi
+fi
+"""
+when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
+format = " ([$output ]($style))"
+style = "bold green"
+require_repo = true
+ignore_timeout = true
 
 [custom.giturl]
 description = "Display symbol for remote Git server"
@@ -80,22 +165,8 @@ style = "fg:teal bg:base"
 require_repo = true
 ignore_timeout = true
 
-[custom.git_worktree]
-description = "Show indicator when inside a git worktree"
-command = """
-if git rev-parse --git-dir >/dev/null 2>&1; then
-      common_dir=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null)
-      git_dir=$(git rev-parse --path-format=absolute --git-dir 2>/dev/null)
-      if [ "$common_dir" != "$git_dir" ]; then
-            echo "⛓ "
-      fi
-fi
-"""
-when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
-format = " ([$output ]($style))"
-style = "bold green"
-require_repo = true
-ignore_timeout = true
+[fossil_branch]
+symbol = " "
 
 [git_branch]
 symbol = "[](base) "
@@ -108,6 +179,9 @@ format = "  [$symbol$branch]($style)[](base)"
 # ahead    = "⇡${count} "
 # behind   = "⇣${count} "
 # diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+
+[git_commit]
+tag_symbol = "  "
 
 [git_status]
 format = "[$untracked$staged$modified$renamed$deleted$conflicted$stashed$ahead_behind ]($style)"
@@ -124,87 +198,316 @@ ahead = "[⇡${count}](teal)"
 behind = "[⇣${count}](peach)"
 diverged = "[⇕⇡${ahead_count}⇣${behind_count}](mauve)"
 
-[os]
-disabled = true
+[hg_branch]
+symbol = " "
 
-[os.symbols]
-Windows = "󰍲"
-Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = " "
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
-Arch = "󰣇"
-Artix = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
+[pijul_channel]
+symbol = " "
 
-[nodejs]
-style = "green"
-symbol = ""
-format = "[ $symbol( $version) ]($style)"
+# ----- Cloud & Containers -----
+
+[aws]
+symbol = " "
+
+[azure]
+symbol = " "
+
+[container]
+symbol = " "
+
+[docker_context]
+symbol = ""
+style = "sapphire"
+format = "[ $symbol( $context) ]($style)"
+
+[gcloud]
+symbol = "󱇶 "
+
+[kubernetes]
+symbol = "󱃾 "
+
+[openstack]
+symbol = " "
+
+# ----- Shell & Environment -----
+
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
+
+[conda]
+symbol = " "
+
+[direnv]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nats]
+symbol = " "
+
+[netns]
+symbol = "󰛳 "
+
+[nix_shell]
+symbol = " "
+
+[shlvl]
+symbol = "󰹍 "
+
+[singularity]
+symbol = " "
+
+[spack]
+symbol = " "
+
+[status]
+symbol = " "
+
+[sudo]
+symbol = " "
+
+# ----- Languages -----
 
 [bun]
+symbol = " "
 style = "green"
+format = "[ $symbol( $version) ]($style)"
 detect_files = ["bun.lock", "bun.lockb"]
 
 [c]
-style = "blue"
 symbol = " "
+style = "blue"
 format = "[ $symbol( $version) ]($style)"
 
-[rust]
-style = "peach"
-symbol = ""
+[cobol]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[cpp]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[crystal]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[dart]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[deno]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[dotnet]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[elixir]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[elm]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[erlang]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[fennel]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[fortran]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[gleam]
+symbol = " "
 format = "[ $symbol( $version) ]($style)"
 
 [golang]
-style = "sky"
 symbol = ""
+style = "sky"
 format = "[ $symbol( $version) ]($style)"
 detect_files = ["go.mod"]
 
-[php]
-style = "mauve"
-symbol = ""
+[haskell]
+symbol = ""
+style = "lavender"
+format = "[ $symbol( $version) ]($style)"
+
+[haxe]
+symbol = " "
 format = "[ $symbol( $version) ]($style)"
 
 [java]
+symbol = ""
 style = "maroon"
-symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[julia]
+symbol = " "
 format = "[ $symbol( $version) ]($style)"
 
 [kotlin]
-style = "mauve"
 symbol = ""
+style = "mauve"
 format = "[ $symbol( $version) ]($style)"
 
-[haskell]
-style = "lavender"
-symbol = ""
+[lua]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[mojo]
+symbol = "󰈸 "
+format = "[ $symbol( $version) ]($style)"
+
+[nim]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[nodejs]
+symbol = ""
+style = "green"
+format = "[ $symbol( $version) ]($style)"
+
+[ocaml]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[odin]
+symbol = "󰟢 "
+format = "[ $symbol( $version) ]($style)"
+
+[perl]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[php]
+symbol = ""
+style = "mauve"
+format = "[ $symbol( $version) ]($style)"
+
+[purescript]
+symbol = " "
 format = "[ $symbol( $version) ]($style)"
 
 [python]
-style = "yellow"
 symbol = ""
+style = "yellow"
 format = "[ $symbol( $version) ]($style)"
 
-[docker_context]
-style = "sapphire"
-symbol = ""
-format = "[ $symbol( $context) ]($style)"
+[raku]
+symbol = "󱖊 "
+format = "[ $symbol( $version) ]($style)"
+
+[red]
+symbol = "󱍼 "
+format = "[ $symbol( $version) ]($style)"
+
+[rlang]
+symbol = "󰟔 "
+format = "[ $symbol( $version) ]($style)"
+
+[ruby]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[rust]
+symbol = "󱘗"
+style = "peach"
+format = "[ $symbol( $version) ]($style)"
+
+[scala]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[solidity]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[swift]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[typst]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[vlang]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[zig]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+# ----- Tool Versions -----
+
+[buf]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[cmake]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[gradle]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[helm]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[maven]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[opa]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[package]
+symbol = "󰏗 "
+format = "[ $symbol( $version) ]($style)"
+
+[pixi]
+symbol = "󰏗 "
+format = "[ $symbol( $version) ]($style)"
+
+[pulumi]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[terraform]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[vagrant]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[xmake]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+# ----- Palettes -----
 
 [palettes.duskhaven]
-# Palette source: ~/dev/lua/duskhaven.nvim/lua/duskhaven/palette.lua
 # --- background ---
 crust = "#0a0d1a"  # bg_dark
 mantle = "#0c1021"  # bg
