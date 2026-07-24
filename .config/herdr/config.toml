@@ -34,7 +34,7 @@ yellow      = "#b3f63a" # yellow
 red         = "#e04a5f" # red
 blue        = "#6b8ab8" # blue
 teal        = "#97c7e9" # blue_light
-peach       = "#f5c6b0" # peach
+peach       = "#ea9a86" # peach
 
 [terminal]
 # Executable used for new interactive panes.

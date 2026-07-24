@@ -527,8 +527,8 @@ subtext1 = "#d8d9c8"  # fg_dim
 subtext0 = "#d8d9c8"  # fg_dim
 
 # --- accents (duskhaven) ---
-rosewater = "#f8e9c7"  # cream
-flamingo = "#f5c6b0"  # peach
+rosewater = "#eadbb8"  # cream
+flamingo = "#ea9a86"  # peach
 pink = "#ff0cac"  # magenta
 mauve = "#ff0cac"  # magenta
 red = "#e04a5f"  # red
