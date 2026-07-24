@@ -4,5 +4,6 @@
 *.log
 
 .config/herdr/*.json
+.config/herdr/*.lock
 
 .warp/tab_configs/*
