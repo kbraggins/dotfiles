@@ -11,18 +11,16 @@ onboarding = false
 #                  vesper
 #
 # herdr has no mechanism to register a wholly new theme name, so "duskhaven"
-# can't appear in this list. name = "tokyo-night" is just a placeholder base;
-# [theme.custom] below overrides every color token the theme system exposes,
-# so none of tokyo-night's own colors show through.
-name = "tokyo-night"
+# can't appear in this list. name = "terminal" is just a placeholder base
+name = "terminal"
 
-# Duskhaven, layered on top of the tokyo-night placeholder (see note above).
+# Duskhaven, layered on top of the "terminal" placeholder (see note above).
 # Palette source: ~/dev/lua/duskhaven.nvim/lua/duskhaven/palette.lua
 [theme.custom]
 panel_bg    = "#0c1021" # bg
 surface0    = "#1a1f35" # bg_light
 surface1    = "#35384a" # gray_darker
-surface_dim = "#0c1021" # bg
+surface_dim = "#0a0d1a" # bg_dark
 overlay0    = "#505257" # gray_dark
 overlay1    = "#a4a7a7" # gray
 text        = "#fdfff1" # fg
@@ -211,8 +209,8 @@ navigate_workspace_down = "ctrl+j"
 # Show detected/reported agent labels in split pane borders when no manual pane name is set.
 #show_agent_labels_on_pane_borders = true
 
-# Agent panel scope: "current" or "all". Toggling it in the sidebar saves this setting.
-# agent_panel_scope = "all"
+# Agent panel sort order: "grouped" or "priority".
+# agent_panel_sort = "grouped"
 
 # Accent color for highlights, borders, and navigation UI.
 # Accepts: hex (#89b4fa), named colors (cyan, blue, magenta), or rgb(r,g,b)
