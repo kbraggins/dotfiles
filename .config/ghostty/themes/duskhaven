@@ -7,10 +7,16 @@ foreground = #fdfff1
 # Cursor & Selection
 # orange
 cursor-color = #f25e01
-# bg_light
-selection-background = #1a1f35
-# fg or white
+# bg 
+cursor-text = #0c1021
+# gray_darker
+selection-background = #35384a
+# fg
 selection-foreground = #fdfff1
+# blue_dark
+split-divider-color = #3c5ea9
+# bg_dark
+unfocused-split-fill = #0a0d1a
 
 # ANSI Color Palette (0-15)
 # black
@@ -25,8 +31,8 @@ palette = 3=#b3f63a
 palette = 4=#6b8ab8
 # magenta
 palette = 5=#ff0cac
-# cyan (blue_dark)
-palette = 6=#3c5ea9
+# blue_light
+palette = 6=#97c7e9
 # gray
 palette = 7=#a4a7a7
 
