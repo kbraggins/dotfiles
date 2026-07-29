@@ -5,11 +5,13 @@ return {
     "kbraggins/duskhaven.nvim",
     dir = "~/dev/lua/duskhaven.nvim",
     lazy = false,
+    priority = 1000,
   },
 
   -- add gruvbox
   {
     "ellisonleao/gruvbox.nvim",
+    lazy = true,
     opts = {
       contrast = "medium",
       transparent_mode = true,
@@ -19,36 +21,24 @@ return {
   -- add catppuccin
   {
     "catppuccin/nvim",
-    lazy = false,
+    lazy = true,
     name = "catppuccin",
     opts = {
       transparent_background = true,
     },
-    -- Enable transparency on startup
-    config = function(_, opts)
-      -- apply colorscheme first
-      vim.cmd.colorscheme(opts.colorscheme)
-
-      -- then force transparency
-      vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-      vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-      vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
-      vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-      vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
-    end,
   },
 
   -- add papercolor
   {
     "NLKNguyen/papercolor-theme",
-    lazy = false,
+    lazy = true,
     name = "papercolor",
   },
 
   -- add onedark
   {
     "navarasu/onedark.nvim",
+    lazy = true,
     opts = {
       style = "dark",
     },
@@ -57,6 +47,7 @@ return {
   -- add kanagawa
   {
     "rebelot/kanagawa.nvim",
+    lazy = true,
     opts = {},
   },
 
