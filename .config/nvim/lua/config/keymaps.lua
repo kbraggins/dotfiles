@@ -2,6 +2,4 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- CMake keybinds
-vim.api.nvim_set_keymap("n", "<leader>cr", ":CMakeRun<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>ce", ":CMakeStopRunner<CR>", { noremap = true, silent = true })
+-- CMake keybinds live in lua/plugins/cmake.lua under the <leader>m group
