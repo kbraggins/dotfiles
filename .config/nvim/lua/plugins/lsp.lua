@@ -2,14 +2,6 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
-      -- The `lang.cmake` extra uses neocmakelsp. A stale `cmake-language-server`
-      -- mason package is also still installed, and mason-lspconfig's
-      -- `automatic_enable` starts every *installed* server -- so a second,
-      -- redundant cmake LSP was launched on every cmake buffer, and its venv is
-      -- broken, so all it ever produced was a spawn error. `enabled = false` puts
-      -- it in mason-lspconfig's exclude list. (lspconfig calls this server
-      -- `cmake`; the old name `cmakels` is no longer matched.)
-      cmake = { enabled = false },
       clangd = {
         cmd = {
           "clangd",
