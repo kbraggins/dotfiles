@@ -4,7 +4,9 @@ return {
     opts = {
       cmake_build_directory = "build", -- Ensure build directory is 'build'
       cmake_compile_commands_options = {
-        action = "none", -- Disables symlink compile_commands.json in root directory
+        -- No symlink/copy into the project root: clangd already looks in
+        -- `build/` next to the source, and `build/` is the directory above.
+        action = "none",
       },
     },
     -- `<leader>m` for "make" -- LazyVim leaves this prefix free.
@@ -42,14 +44,48 @@ return {
     },
   },
 
+  -- Format with gersemi rather than the extra's `cmake_format`. cmake-format
+  -- ships in `cmakelang`, which mason still pins at 0.6.13 (2021); gersemi is
+  -- actively developed, understands modern CMake, and reads `.gersemirc`.
   {
     "stevearc/conform.nvim",
     optional = true,
     opts = {
       formatters_by_ft = {
-        cmake = { "cmake_format" },
+        cmake = { "gersemi" },
       },
     },
+  },
+
+  -- neocmakelsp lints on its own (`lint.enable` defaults to true), so the
+  -- separate cmakelint pass is redundant -- and it comes from the same stale
+  -- cmakelang family. `false` clears the extra's `cmake = { "cmakelint" }`.
+  {
+    "mfussenegger/nvim-lint",
+    optional = true,
+    opts = {
+      linters_by_ft = {
+        cmake = {},
+      },
+    },
+  },
+
+  -- `ensure_installed` only ever grows (see lua/plugins/mason.lua), so dropping
+  -- the extra's cmakelang/cmakelint means filtering them back out here.
+  {
+    "mason-org/mason.nvim",
+    optional = true,
+    opts = function(_, opts)
+      local drop = { cmakelang = true, cmakelint = true }
+      local kept = {}
+      for _, tool in ipairs(opts.ensure_installed or {}) do
+        if not drop[tool] then
+          kept[#kept + 1] = tool
+        end
+      end
+      kept[#kept + 1] = "gersemi"
+      opts.ensure_installed = kept
+    end,
   },
 
   {
