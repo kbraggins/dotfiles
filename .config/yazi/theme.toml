@@ -6,7 +6,8 @@
 #   gray=#a4a7a7 gray_dark=#505257 gray_darker=#35384a black=#272822
 
 [app]
-overall = { bg = "#0c1021" } # bg
+# No bg, so Ghostty's background-opacity shows through (nvim uses transparent = true)
+overall = {}
 
 
 [mgr]
@@ -29,9 +30,9 @@ marker_marked   = { fg = "#97c7e9", bg = "#97c7e9" } # blue_light
 marker_selected = { fg = "#f25e01", bg = "#f25e01" } # orange
 
 # Count
-count_copied   = { fg = "#0a0d1a", bg = "#55ba30" } # bg_dark, green
-count_cut      = { fg = "#0a0d1a", bg = "#e04a5f" } # bg_dark, red
-count_selected = { fg = "#0a0d1a", bg = "#f25e01" } # bg_dark, orange
+count_copied   = { fg = "#0c1021", bg = "#55ba30" } # bg, green
+count_cut      = { fg = "#0c1021", bg = "#e04a5f" } # bg, red
+count_selected = { fg = "#0c1021", bg = "#f25e01" } # bg, orange
 
 # Border
 border_symbol = "│"
@@ -44,20 +45,21 @@ inactive = { bg = "#0a0d1a", fg = "#a4a7a7" }              # bg_dark, gray
 
 
 [mode]
-normal_main = { fg = "#0a0d1a", bg = "#6b8ab8", bold = true } # bg_dark, blue
-normal_alt  = { fg = "#6b8ab8", bg = "#35384a" }               # blue, gray_darker
+# Matches the duskhaven lualine theme: normal = orange, visual = magenta
+normal_main = { fg = "#0c1021", bg = "#f25e01", bold = true } # bg, orange
+normal_alt  = { fg = "#f25e01", bg = "#35384a" }               # orange, gray_darker
 
-select_main = { fg = "#0a0d1a", bg = "#f25e01", bold = true } # bg_dark, orange
-select_alt  = { fg = "#f25e01", bg = "#35384a" }               # orange, gray_darker
+select_main = { fg = "#0c1021", bg = "#ff0cac", bold = true } # bg, magenta
+select_alt  = { fg = "#ff0cac", bg = "#35384a" }               # magenta, gray_darker
 
-unset_main = { fg = "#0a0d1a", bg = "#a4a7a7", bold = true } # bg_dark, gray
+unset_main = { fg = "#0c1021", bg = "#a4a7a7", bold = true } # bg, gray
 unset_alt  = { fg = "#a4a7a7", bg = "#35384a" }              # gray, gray_darker
 
 
 [indicator]
-parent  = { fg = "#0a0d1a", bg = "#97c7e9" } # bg_dark, blue_light
-current = { fg = "#0a0d1a", bg = "#6b8ab8" } # bg_dark, blue
-preview = { fg = "#0a0d1a", bg = "#97c7e9" } # bg_dark, blue_light
+parent  = { fg = "#0c1021", bg = "#97c7e9" } # bg, blue_light
+current = { fg = "#0c1021", bg = "#6b8ab8" } # bg, blue
+preview = { fg = "#0c1021", bg = "#97c7e9" } # bg, blue_light
 
 
 [status]
@@ -76,7 +78,7 @@ perm_sep   = { fg = "#505257" } # gray_dark
 
 
 [input]
-# Matches nvim TelescopePromptBorder
+# Matches nvim SnacksPickerInputBorder
 border   = { fg = "#f25e01" }             # orange
 title    = { fg = "#f25e01", bold = true }
 value    = { fg = "#fdfff1" }             # fg
@@ -84,7 +86,7 @@ selected = { bg = "#35384a" }             # gray_darker
 
 
 [pick]
-# Matches nvim TelescopeBorder
+# Matches nvim SnacksPickerBorder / SnacksPickerSelected
 border   = { fg = "#97c7e9" }                             # blue_light
 active   = { fg = "#fdfff1", bg = "#1a1f35", bold = true } # fg, bg_light
 inactive = { fg = "#d8d9c8" }                             # fg_dim
@@ -151,11 +153,14 @@ rules = [
   { url = "*", is = "dummy", bg = "#e04a5f" },
   { url = "*/", is = "dummy", bg = "#e04a5f" },
 
-  # Fallbacks based on NeoTree mappings
-  { url = ".*", fg = "#a4a7a7" }, # gray (NeoTreeDotfile)
-  { url = "*/", fg = "#b3f63a" }, # yellow (NeoTreeDirectoryName)
-  { url = "*", is = "link", fg = "#97c7e9" }, # blue_light (Symlink)
-  { url = "*", fg = "#fdfff1" },              # fg
+  # Fallbacks based on the Snacks explorer mappings. First match wins, and
+  # patterns without a trailing "/" only match files.
+  { url = "*", is = "link", fg = "#97c7e9" },  # blue_light (symlinked file)
+  { url = "*/", is = "link", fg = "#97c7e9" }, # blue_light (symlinked dir)
+  { url = ".*", fg = "#505257" },              # gray_dark (SnacksPickerPathHidden)
+  { url = ".*/", fg = "#505257" },             # gray_dark (hidden dir)
+  { url = "*/", fg = "#b3f63a", bold = true }, # yellow (Directory)
+  { url = "*", fg = "#fdfff1" },               # fg
 ]
 
 
