@@ -5,5 +5,7 @@
 
 .config/herdr/*.json
 .config/herdr/*.lock
+.config/herdr/*.sock*
+.config/herdr/session-snapshots/
 
 .warp/tab_configs/*
