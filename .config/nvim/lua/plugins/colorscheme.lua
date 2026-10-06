@@ -1,9 +1,17 @@
 return {
 
+  -- Configure LazyVim to load colorscheme
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "duskhaven",
+    },
+  },
+
   -- duskhaven.nvim
   {
     "kbraggins/duskhaven.nvim",
-    dir = "~/dev/lua/duskhaven.nvim",
+    dev = true, -- local checkout in ~/dev/lua when present (see dev in lua/config/lazy.lua)
     lazy = false,
     priority = 1000,
     opts = {
@@ -11,7 +19,7 @@ return {
     },
   },
 
-  -- add gruvbox
+  -- gruvbox
   {
     "ellisonleao/gruvbox.nvim",
     lazy = true,
@@ -21,7 +29,7 @@ return {
     },
   },
 
-  -- add catppuccin
+  -- catppuccin
   {
     "catppuccin/nvim",
     lazy = true,
@@ -31,14 +39,14 @@ return {
     },
   },
 
-  -- add papercolor
+  -- papercolor
   {
     "NLKNguyen/papercolor-theme",
     lazy = true,
     name = "papercolor",
   },
 
-  -- add onedark
+  -- onedark
   {
     "navarasu/onedark.nvim",
     lazy = true,
@@ -47,18 +55,10 @@ return {
     },
   },
 
-  -- add kanagawa
+  -- kanagawa
   {
     "rebelot/kanagawa.nvim",
     lazy = true,
     opts = {},
-  },
-
-  -- Configure LazyVim to load colorscheme
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "duskhaven",
-    },
   },
 }
