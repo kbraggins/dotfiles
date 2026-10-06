@@ -20,15 +20,17 @@ return {
       ["<C-f>"] = { "scroll_documentation_down", "fallback" },
     }
 
-    -- 2. Switch to manual selection mode so text doesn't swap until you press Enter
-    opts.completion = {
+    -- 2. Switch to manual selection mode so text doesn't swap until you press Enter.
+    -- Merged rather than assigned so LazyVim's completion defaults (auto-brackets,
+    -- treesitter menu highlighting, auto-shown docs) are kept.
+    opts.completion = vim.tbl_deep_extend("force", opts.completion or {}, {
       list = {
         selection = {
           preselect = false, -- Keeps the menu open without locking the first option instantly
           auto_insert = false, -- Disables the text autofilling side-effect while scrolling
         },
       },
-    }
+    })
 
     return opts
   end,
